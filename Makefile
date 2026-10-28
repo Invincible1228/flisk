@@ -38,6 +38,8 @@ test-shell: ## Check shell script syntax, e2e suite definitions, the CI inventor
 	node --test scripts/check-test-helper-allowlist.test.mjs
 	node --test scripts/check-published-service-schema.test.mjs
 	node --test scripts/pilot-scorecard.test.mjs
+	node --test scripts/package-lifecycle-smoke.test.mjs
+	node --test scripts/cold-boot-notes.test.mjs
 	node --test scripts/release-binaries.test.mjs
 	node --test scripts/umux-lite-score.test.mjs
 	node --test scripts/ade-score.test.mjs
@@ -58,6 +60,7 @@ test-shell: ## Check shell script syntax, e2e suite definitions, the CI inventor
 	node scripts/competitor-matrix.mjs --check
 	node --test scripts/ci-report.test.mjs
 	node --test scripts/test-summary.test.mjs
+	node --test scripts/sync-byo-templates.test.mjs
 	node --test scripts/audit-codebase.test.mjs
 	node --test 'tests/e2e/lib/__tests__/*.test.mjs'
 
